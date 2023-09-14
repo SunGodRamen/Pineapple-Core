@@ -1,0 +1,15 @@
+[package]
+name = "pineapple_core"
+version = "0.0.0"
+description = "A Rust, Autohotkey, and C based engine for tracking desktop state and applying configurations in real time."
+authors = ["ra"]
+license = "we dont need no stinking license"
+repository = "https://github.com/SunGodRamen/Pineapple-Core"
+edition = "2021"
+
+[[bin]]
+name = "Pineapple_Core"
+path = "src/main.rs"
+
+[dependencies]
+walkdir = "2.3"

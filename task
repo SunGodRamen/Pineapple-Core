@@ -1,0 +1,38 @@
+9/14
+Ticket 1: Set Up Tauri with Rust Backend
+X Navigate to your project root.
+X Initialize Tauri using tauri init.
+X Update the Tauri configuration as needed (e.g., application name, window dimensions).
+X Test the Tauri setup by running tauri dev.
+
+Ticket 2: Expose file_browser Functionality to JS
+X Modify file_browser.rs to expose a function, e.g.,  list_files_in_directory(path: &str) -> Vec<String>.
+In src-tauri/src/main.rs, add the Tauri command handler to handle the JS call and route to the list_files_in_directory function.
+Return the file list to the JS caller.
+
+Ticket 3: Expose file_launcher Functionality to JS
+Modify file_launcher.rs to expose a function, e.g., open_file(path: &str, app: Option<&str>).
+In src-tauri/src/main.rs, add the Tauri command handler to handle the JS call and route to the open_file function.
+Handle possible errors and return success/failure status to the JS caller.
+
+Ticket 4: Develop the File Browser GUI
+Design the basic HTML/CSS layout for the file browser in index.html and styles.css.
+Add JavaScript in main.js to:
+Call the Rust function to list files when a directory is selected.
+Display the list of files in the GUI.
+Open a file when clicked or when a specific action is taken.
+Ensure the JS correctly handles the data returned from Rust and provides appropriate feedback to the user.
+
+Ticket 5: Additional Features and Polish
+Add icons/thumbnails for different file types.
+Implement a search or filter functionality for the file list.
+Add error handling and user feedback for potential issues (e.g., directory not found, file not opening).
+Optimize the GUI responsiveness and ensure it's working seamlessly with the backend.
+
+Ticket 6: Testing and Documentation
+Thoroughly test the application for various scenarios:
+Different directory structures.
+Opening files with and without specific apps.
+Handling invalid paths or inaccessible directories.
+Document the functionalities and possible edge cases.
+Create a user manual or guide if needed.
