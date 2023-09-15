@@ -1,5 +1,12 @@
-mod file_browser;
+pub mod tcp_interface;
+pub mod message_handler;
+pub mod file_service;
 
-fn list_files_in_directory(path: &str) -> Vec<String> {
-    file_browser::list_files_in_directory(path)
+pub use tcp_interface::server::initialize_server_thread;
+
+use std::error::Error;
+
+fn main() -> Result<(), Box<dyn Error>> {
+    initialize_server_thread();
+    Ok(())
 }

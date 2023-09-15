@@ -8,8 +8,9 @@ repository = "https://github.com/SunGodRamen/Pineapple-Core"
 edition = "2021"
 
 [[bin]]
-name = "Pineapple_Core"
+name = "pineapple_core"
 path = "src/main.rs"
 
 [dependencies]
 walkdir = "2.3"
+tokio = { version = "1", features = ["full"] }

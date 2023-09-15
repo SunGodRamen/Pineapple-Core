@@ -8,8 +8,13 @@ modules/core
 ├── README.md
 └── src
     ├── file_interface
+    │   ├── mod.rs
     │   ├── file_browser.rs
     │   └── file_launcher.rs
+    ├── tcp_interface
+    │   ├── mod.rs
+    │   ├── server.rs
+    │   └── client.rs
     ├── context_system
     │   ├── mod.rs
     │   ├── db.rs
@@ -91,8 +96,6 @@ script_library: A collection of scripts and handlers. These scripts could intera
 
 cli: This would be the command-line interface module if you choose to have command line functionality outside of the GUI.
 
-
-commands.rs:
-
-Belongs to the cli module.
-Defines commands for the CLI and their behavior, like parsing and execution.
+    commands.rs:
+    Belongs to the cli module.
+    Defines commands for the CLI and their behavior, like parsing and execution.
